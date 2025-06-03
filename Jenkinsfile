@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_REGION = 'us-east-1' // Set your AWS region
-        SSH_KEY = credentials('ec2-ssh-key')  // Use stored SSH key
+        SSH_KEY = credentials('ec2-user')  // Use stored SSH key
         EC2_IP = '172.31.86.157' // Replace with actual EC2 IP
         REMOTE_PATH = "/home/ec2-user/terraform" // Path to Terraform scripts
     }
